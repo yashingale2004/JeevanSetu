@@ -7,91 +7,66 @@ import PageBlueprint from "../../components/utilities/PageBlueprint/PageBlueprin
 function AboutUs() {
   return (
     <PageBlueprint title={"About Us"}>
-            {/* ===== MISSION & VISION ===== */}
-      <section className="mission-vision-section">
-        <div className="mission-block">
-          <h2>OUR MISSION</h2>
-          <ul>
-            <li>
-              Changing society's attitude towards homeless children through
-              public participation in social activities.
-            </li>
-            <li>
-              Invite homeless children for education by educating them according
-              to their skill and ability.
-            </li>
-            <li>
-              Offering them the experience of the sweetness of a relationship by
-              giving them love like family members.
-            </li>
-            <li>Acknowledging social responsibility through participation.</li>
-          </ul>
-        </div>
-        <div className="vision-block">
-          <h2>OUR VISION</h2>
-          <p>
-            To rehabilitate homeless children afflicted with social problems and
-            create a healthy youth for a self-reliant society.
-          </p>
+      {/* ===== MISSION & VISION ===== */}
+      <section className="px-6 md:px-20 py-10 bg-gray-50">
+        <div className="grid md:grid-cols-2 gap-10">
+          {/* Mission */}
+          <div className="flex flex-col items-start space-y-4">
+            <img src={missionImg} alt="Mission" className="w-12 h-12" />
+            <h3 className="text-xl font-semibold">OUR MISSION</h3>
+            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+              <li>Changing society’s attitude towards homeless children through public participation in social activities.</li>
+              <li>To make homeless children self-reliant by educating them according to their skill and ability.</li>
+              <li>Giving them love like a family.</li>
+              <li>Awakening social responsibility through patriotism.</li>
+            </ul>
+          </div>
+
+          {/* Vision */}
+          <div className="flex flex-col items-start space-y-4">
+            <img src={visionImg} alt="Vision" className="w-12 h-12" />
+            <h3 className="text-xl font-semibold">OUR VISION</h3>
+            <p className="text-gray-700">
+              To rehabilitate homeless children afflicted with social problems and create a healthy youth for a self-reliant society.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* ===== WHO WE ARE ===== */}
-      <section className="who-we-are-section">
-        <h3>WHO WE ARE</h3>
-        <div className="about-summary">
-          <div className="summary-text">
-            <h4>Summary of Jeevan samvardhan Foundation</h4>
+      <section className="px-6 md:px-20 py-10">
+        <h3 className="text-2xl font-bold mb-6 border-b-2 w-40 pb-2">WHO WE ARE</h3>
+        <div className="flex flex-col md:flex-row items-center md:items-start gap-10">
+          <div className="flex-1 text-gray-700 space-y-4">
             <p>
-              Born in a typical Maharashtrian rural Warkari family, he was
-              closely associated with school culture from almost 15 years. Out
-              of which 8 years he was teacher. After that he worked for a
-              organization working for homeless children. While working in such
-              a setup he came across various issues and issues towards many
-              kinds of kids. Going deep in this matter he realized a bigger
-              issue of Homeless kids and need of their upliftment.
-              <br />
-              <br />
-              So he formed a NGO JSF and working for this noble cause.
+              <strong>Summary of Jeevan Samvardhan Foundation</strong> <br />
+              Born in a typical Maharashtrian rural Warkari family, he was closely associated with the student union for almost 15 years...
             </p>
-            <span className="founder-name">Sadashiv Chavan</span>
+            <p>So he formed an NGO JSF and is working for this noble cause.</p>
           </div>
-          <div className="summary-image">
-            <img src="/src/assets/sadashivchahan.jpg" alt="Founder" />
+          <div className="flex-1">
+            <img src={founderImg} alt="Founder" className="rounded-lg shadow-lg" />
+            <p className="mt-2 text-center text-gray-600 font-medium">Sadashiv Chavan</p>
           </div>
         </div>
       </section>
 
-      {/* ===== BASIC NEEDS SECTION ===== */}
-      <section className="basic-needs-section">
-        <h4>The basic needs of such colonies are :</h4>
-        <ul>
-          <li>
-            Education for all ages. We would like to start a Ekal Vidyalaya
-            (Biswadi) and also providing Nutrition to these children.
-          </li>
-          <li>To inculcate civilization in entire Community.</li>
-          <li>
-            Health Awareness and Medical Aid, Sanitation and cleanliness, habit
-            cultivation.
-          </li>
-          <li>
-            And lastly for final development, Vocational Training to youth and
-            ladies.
-          </li>
-          <li>Skill training for Livelihood.</li>
-        </ul>
-      </section>
+      {/* ===== BASIC NEEDS ===== */}
+      <section className="px-6 md:px-20 py-10 bg-gray-50">
+        <h3 className="text-2xl font-bold mb-6 border-b-2 w-80 pb-2">The basic needs of such colonies are :</h3>
+        <div className="grid md:grid-cols-2 gap-10">
+          <ul className="space-y-2 text-gray-700 list-inside list-disc">
+            <li>Education for all ages. Start Ekal Vidyalaya (Balwadi) and provide nutrition.</li>
+            <li>To inculcate civilization in the entire community.</li>
+            <li>Health awareness and medical aid. Sanitation and cleanliness habit cultivation.</li>
+            <li>Vocational training for youth and ladies.</li>
+            <li>Skill training for livelihood.</li>
+          </ul>
 
-      {/* ===== DOCUMENTS SECTION ===== */}
-      <section className="documents-section">
-        <div className="documents-gallery">
-          <a href="/src/assets/img1.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img1.jpg" alt="Document 1" />
-          </a>
-          <a href="/src/assets/img3.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img3.jpg" alt="Document 2" />
-          </a>
+          <div className="flex flex-col gap-4">
+            <img src={cert1} alt="Certificate 1" className="rounded-lg shadow-lg" />
+            <img src={cert2} alt="Certificate 2" className="rounded-lg shadow-lg" />
+          </div>
         </div>
       </section>
     </PageBlueprint>

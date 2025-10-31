@@ -14,86 +14,61 @@ button {
   cursor: pointer;
 }
 
-/* ===================== HERO SECTION ===================== */
-.hero-section {
-  display: flex;
-  width: 100%;
-  min-height: 90vh;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  position: relative;
-  color: white;
-}
-
-.hero-inner {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.hero-title {
-  font-weight: 700;
-  font-size: 3rem;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
+/* HERO SECTION CARDS BIGGER AND HALF VISIBLE */
 .hero-cards {
   display: flex;
   gap: 2rem;
-  margin-top: 650px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: hidden; /* prevents horizontal scroll */
+  margin-top: -100px; /* move it down, half visible from hero */
+  padding-bottom: 100px;
+  perspective: 1000px;
 }
 
 .hero-card {
-  width: 500px;
-  height: 700px;
+  width: 350px; /* bigger card */
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   background-color: #fff;
   color: #333;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease, scale 0.5s ease;
+  transform: scale(0.8); /* smaller initially for zoom effect */
 }
 
 .hero-card img {
   width: 100%;
-  height: 350px;
+  height: 220px;
   object-fit: cover;
-  border-color: #0e926b;
-}
-
-.hero-card:hover {
-  transform: translateY(-10px);
 }
 
 .hero-card-title {
-  height: 60px;
   font-weight: 600;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .hero-card-description {
-  height: 150px;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   margin-bottom: 1rem;
+  line-height: 1.5;
 }
 
 .hero-card-btn {
-  width: 275px;
-  height: 50px;
-  background-color: #ff6b6b;
+  background-color: #1e90ff;
   color: #fff;
-  transition: background-color 0.3s ease;
 }
 
 .hero-card-btn:hover {
-  background-color: #ff4757;
+  background-color: #0077cc;
 }
+
+/* ZOOM EFFECT ON SCROLL */
+.hero-card.zoom {
+  transform: scale(1); /* full size when visible */
+}
+
 
 /* ===================== WELCOME SECTION ===================== */
 .welcome-section {
@@ -122,12 +97,12 @@ button {
 }
 
 .welcome-buttons button {
-  background-color: #0e926b;
+  background-color: #1e90ff;
   color: #fff;
 }
 
 .welcome-buttons button:hover {
-  background-color: #0e926b;
+  background-color: #0077cc;
 }
 
 /* ===================== EMPOWERING SECTION ===================== */
@@ -146,7 +121,7 @@ button {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid 1e90ff;
+  border: 5px solid #1e90ff;
 }
 
 .empowering-content {
@@ -163,7 +138,7 @@ button {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #0e926b;
+  color: #1e90ff;
 }
 
 .empowering-description {
@@ -273,12 +248,12 @@ button {
 }
 
 .submit-btn {
-  background-color: #0e926b;
+  background-color: #1e90ff;
   color: #fff;
 }
 
 .submit-btn:hover {
-  background-color: #0e926b;
+  background-color: #0077cc;
 }
 
 /* ===================== TRANSPARENCY SECTION ===================== */

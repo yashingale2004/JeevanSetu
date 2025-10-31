@@ -1,0 +1,235 @@
+/* ===== AboutUs.css ===== */
+
+body {
+  font-family: "Segoe UI", "Roboto", "Arial", sans-serif;
+  background: #f5f7fa;
+  color: #23272f;
+  margin: 0;
+  padding: 0;
+}
+
+.PageBlueprint {
+  min-height: 100vh;
+  background: #fff;
+  padding-bottom: 40px;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  justify-content: center;
+  margin: 48px 0 56px 0;
+}
+
+.mission-block,
+.vision-block {
+  flex: 1 1 420px;
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(60, 60, 60, 0.07);
+  padding: 36px 32px 32px 32px;
+  margin: 0 0;
+  transition: box-shadow 0.2s;
+}
+
+.mission-block:hover,
+.vision-block:hover {
+  box-shadow: 0 8px 32px rgba(60, 60, 60, 0.13);
+}
+
+.mission-block h2,
+.vision-block h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.04em;
+  color: #23408c;
+}
+
+.mission-block ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.mission-block ul li {
+  margin-bottom: 12px;
+  font-size: 1.13rem;
+  line-height: 1.7;
+  color: #2d3851;
+}
+
+.vision-block p {
+  font-size: 1.13rem;
+  margin: 0;
+  color: #2d3851;
+  line-height: 1.7;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  margin: 56px 0 0 0;
+  padding: 0 16px;
+}
+
+.who-we-are-section h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #23408c;
+  letter-spacing: 0.07em;
+  margin-bottom: 18px;
+}
+
+.about-summary {
+  display: flex;
+  gap: 36px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 34px;
+}
+
+.summary-text {
+  flex: 2;
+  min-width: 260px;
+}
+
+.summary-text h4 {
+  font-size: 1.16rem;
+  font-weight: 700;
+  color: #23408c;
+  margin-bottom: 10px;
+}
+
+.summary-text p {
+  font-size: 1.06rem;
+  line-height: 1.7;
+  color: #32353b;
+  margin-bottom: 18px;
+}
+
+.founder-name {
+  display: block;
+  font-size: 1.04rem;
+  font-weight: 500;
+  color: #7d5a1e;
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+.summary-image img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px rgba(80, 80, 80, 0.11);
+  background: #f7f9fb;
+}
+
+/* Basic Needs Section */
+.basic-needs-section {
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(48, 64, 117, 0.07);
+  padding: 36px 32px;
+  margin: 40px 0 0 0;
+}
+
+.basic-needs-section h4 {
+  font-size: 1.19rem;
+  font-weight: 700;
+  color: #23408c;
+  margin-bottom: 17px;
+  letter-spacing: 0.03em;
+}
+
+.basic-needs-section ul {
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+.basic-needs-section ul li {
+  font-size: 1.09rem;
+  margin-bottom: 13px;
+  line-height: 1.58;
+  position: relative;
+  padding-left: 22px;
+}
+
+.basic-needs-section ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 11px;
+  width: 7px;
+  height: 7px;
+  background: #ff9545;
+  border-radius: 50%;
+}
+
+/* Documents Section */
+.documents-section {
+  margin: 42px 0 0 0;
+  padding: 0 16px;
+}
+
+.documents-gallery {
+  display: flex;
+  gap: 38px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
+.documents-gallery img {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 18px rgba(48, 64, 117, 0.09);
+  object-fit: contain;
+  width: 230px;
+  height: 310px;
+  border: 1px solid #e7eaf1;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.documents-gallery img:hover {
+  transform: scale(1.045);
+  box-shadow: 0 8px 32px rgba(48, 64, 117, 0.16);
+  border-color: #d1d8e9;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .mission-vision-section {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .about-summary {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 750px) {
+  .mission-block,
+  .vision-block,
+  .basic-needs-section {
+    padding: 20px 8px;
+    border-radius: 9px;
+  }
+  .documents-gallery {
+    gap: 14px;
+  }
+  .documents-gallery img {
+    width: 150px;
+    height: 210px;
+  }
+}
+
+@media (max-width: 500px) {
+  .documents-gallery img {
+    width: 100px;
+    height: 140px;
+  }
+}

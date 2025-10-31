@@ -10,9 +10,7 @@
   margin-bottom: 44px;
   max-width: 100%;
   padding: 0 10px 0 10px;
-
-  box-shadow: none;
-  border-bottom: none;
+  background: none;
   padding-bottom: 38px;
   overflow: hidden;
   text-align: left;
@@ -21,7 +19,6 @@
 
 .mission-block h2,
 .vision-block h2 {
-  overflow: hidden;
   font-size: 2.2rem;
   width: 100%;
   font-weight: 900;
@@ -36,7 +33,8 @@
 .mission-block ul {
   margin: 0;
   padding-left: 38px !important;
-  list-style: none !important;
+  list-style-type: disc !important;
+  list-style-position: inside !important;
 }
 
 .mission-block ul li {
@@ -44,35 +42,33 @@
   font-size: 1.25rem;
   line-height: 1.8;
   color: #2d3851;
-  position: relative;
-  padding-left: 24px;
+  list-style-type: disc !important;
+  display: list-item !important;
+  background:  #ff9545 !important;
+  border: none !important;
 }
 
 .mission-block ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  width: 11px;
-  height: 11px;
-  background: #ff9545;
-  border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
+  /* Remove any pseudo-element custom bullets */
+  content: none !important;
 }
 
-/* Vision block unchanged */
 .vision-block {
   margin-left: 8vw;
   margin-bottom: 44px;
   max-width: 100%;
   padding: 0 10px 0 10px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
   text-align: left;
 }
 
 .vision-block p {
   width: 100%;
   font-size: 1.25rem;
+  margin: 0;
   color: #2d3851;
   line-height: 1.8;
 }
@@ -113,7 +109,6 @@
 }
 
 .who-we-are-section h3 {
-  overflow: hidden;
   margin-left: 8.5vw;
   margin-bottom: 44px;
   max-width: 100%;
@@ -147,7 +142,6 @@
 }
 
 .summary-text h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
   color: black;
@@ -179,12 +173,11 @@
 }
 
 .summary-image img {
-  overflow: hidden;
   width: 400px;
   height: 400px;
   object-fit: cover;
   border-radius: 18px;
-  background: #f7f9fb;
+  background: black;
   margin-left: 18px;
   box-shadow: 0 2px 16px rgba(80, 80, 80, 0.11);
   transition: transform 0.18s;
@@ -232,7 +225,6 @@
 }
 
 .basic-needs-section h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
   color: black;
@@ -243,7 +235,8 @@
 .basic-needs-section ul {
   padding-left: 32px;
   margin: 0;
-  list-style: none !important;
+  list-style-type: disc !important;
+  list-style-position: inside !important;
 }
 
 .basic-needs-section ul li {
@@ -251,21 +244,16 @@
   margin-bottom: 18px;
   line-height: 1.75;
   position: relative;
-  padding-left: 24px;
+  padding-left: 22px;
   color: #32353b;
+  list-style-type: disc !important;
+  display: list-item !important;
+  background: none !important;
+  border: none !important;
 }
 
 .basic-needs-section ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  width: 11px;
-  height: 11px;
-  background: #ff9545;
-  border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
+  content: none !important;
 }
 
 /* Responsive Design to match WHO WE ARE */

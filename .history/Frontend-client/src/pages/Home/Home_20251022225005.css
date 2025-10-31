@@ -1,0 +1,383 @@
+/* ===== GENERAL STYLES ===== */
+* { box-sizing: border-box; }
+html, body { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 720px; /* changed from fixed height to min-height */
+  color: white;
+  overflow: visible; /* ensure no internal scroll */
+  margin-bottom: 0; /* removes unwanted white gap below hero */
+  padding-bottom: 160px; /* makes space for overlapping cards naturally */
+
+}
+
+/* dark overlay */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+/* inner container */
+.hero-inner {
+  position: relative; /* changed from absolute to relative */
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 140px; /* pushes text slightly lower to match Figma */
+
+}
+
+/* HEADLINE - centered vertically above cards */
+.hero-title {
+  margin-top: 120px; /* replaced top positioning with margin */
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.06;
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  letter-spacing: 0.4px;
+  width: min(1100px, 92%);
+}
+
+/* CARDS - positioned using margin instead of absolute */
+.hero-cards {
+  margin-top: 120px;
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  z-index: 4;
+  position: relative;
+}
+
+/* individual card */
+.hero-card {
+  width: 330px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #008c68;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+
+.hero-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+}
+
+
+.hero-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+  flex-shrink: 0;
+}
+
+.hero-card .MuiCardContent-root,
+.hero-card .card-content {
+  padding: 18px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hero-card-title {
+  color: #008c68;
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.hero-card-description {
+  color: #222;
+  font-size: 14.5px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+/* pill CTA */
+.hero-card-btn {
+  display: inline-block;
+  background-color: #fca00c !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  border-radius: 28px !important;
+  padding: 10px 30px !important;
+  box-shadow: 0 6px 10px rgba(252,160,12,0.15);
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+/* ===== WELCOME SECTION ===== */
+.welcome-section {
+  background-color: #0e926b;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 72px;
+}
+
+.welcome-section h4 {
+  font-weight: 700;
+  font-size: 34px;
+  margin: 0 0 20px;
+}
+
+.welcome-section p {
+  max-width: 850px;
+  margin: 0 auto 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #f2f2f2;
+}
+
+.welcome-buttons {
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.welcome-buttons button {
+  padding: 12px 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+}
+
+.welcome-buttons button:first-child { background:#000 !important; color:#fff !important; }
+.welcome-buttons button:last-child { background:#fca00c !important; color:#000 !important; }
+
+/* ===== EMPOWERING SECTION ===== */
+.empowering-section {
+  background: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 40px;
+  flex-wrap: wrap;
+}
+
+.empowering-image img {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.empowering-content {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.empowering-title { font-size: 38px; font-weight:700; color:#000; }
+.empowering-subtitle { font-size:22px; font-weight:600; color:#000; }
+.empowering-description { font-size:15.5px; color:#444; line-height:1.75; text-align:justify; }
+
+.learn-more-btn {
+  background-color: #fca00c !important;
+  color: #000 !important;
+  font-weight: 600 !important;
+  padding: 10px 34px !important;
+  border-radius: 8px !important;
+  width: fit-content;
+}
+
+/* ===== FEATURED CAMPAIGNS ===== */
+.featured-campaigns-section {
+  background: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-subtitle { 
+  color:#666; 
+  font-weight:700; 
+  font-size:14px; 
+  letter-spacing:1.5px; 
+  margin-bottom:10px; 
+  text-align:center;
+}
+
+.section-title { 
+  font-size:38px; 
+  font-weight:700; 
+  color:#000; 
+  margin-bottom:15px; 
+  text-align:center;
+}
+
+.section-description {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 50px !important;
+  color: #444;
+  line-height: 1.8;
+  font-size: 16px;
+  text-align: center !important;
+  word-break: break-word;
+}
+
+
+
+.donation-cards-container {
+  display:flex;
+  gap:50px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact-section {
+  background-color: #0e926b;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 50px;
+  padding: 80px 40px;
+  flex-wrap: wrap;
+}
+
+.contact-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  flex: 1;
+  max-width: 600px;
+}
+
+.contact-images img {
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:10px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.25);
+}
+
+.contact-form { flex:1; color:#fff; max-width:450px; }
+.contact-title { font-weight:700; font-size:32px; margin-bottom:12px; }
+.contact-subtext { font-size:15px; margin-bottom:25px; line-height:1.7; }
+
+.form-fields { display:flex; flex-direction:column; gap:15px; }
+.form-fields input, .form-fields textarea {
+  width:100%; border:none; border-radius:8px; padding:12px; font-size:14px;
+}
+textarea { height:100px; resize:none; }
+
+.submit-btn {
+  background:#fca00c !important; color:#000 !important; font-weight:600 !important;
+  text-transform:none !important; border-radius:8px !important; padding:10px 28px !important;
+}
+
+/* ===== TRANSPARENCY SECTION ===== */
+.transparency-section {
+  text-align:center;
+  padding:100px 20px;
+  background:#fff;
+  color:#000;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+
+.transparency-title {
+  font-size:34px;
+  font-weight:700;
+  margin-bottom:18px;
+  text-align:center;
+}
+
+.transparency-text {
+  max-width:760px;
+  margin:0 auto;
+  font-size:16px;
+  line-height:1.8;
+  color:#444;
+  text-align:center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .hero-title { font-size:48px; top:18%; }
+}
+
+@media (max-width: 900px) {
+  .hero-section { height:620px; margin-bottom: 120px; }
+  .hero-title { font-size:40px; top:16%; padding: 0 16px; }
+  .hero-cards { bottom: -100px; gap: 18px; }
+  .contact-images { grid-template-columns: repeat(2,1fr); }
+  .empowering-image img { width:300px; height:300px; }
+  .empowering-section { padding:60px 20px; gap:40px; }
+}
+
+@media (max-width: 600px) {
+  .hero-section { height: auto; padding: 60px 0 30px; margin-bottom: 0; }
+  .hero-inner { position: relative; height: auto; }
+  .hero-title {
+    position: relative;
+    top: auto;
+    transform: none;
+    left: auto;
+    width: 92%;
+    font-size: 30px;
+    margin: 0 auto 22px;
+  }
+  .hero-cards {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+    padding: 0 16px 20px;
+  }
+  .hero-card { width: 92%; max-width: 420px; }
+  .section-title { font-size: 28px; }
+  .transparency-title { font-size: 26px; }
+  .contact-title { font-size: 26px; }
+  .welcome-section { padding: 60px 20px 40px; }
+}
+
+/* accessibility focus outline */
+button:focus, .hero-card-btn:focus {
+  outline: 3px solid rgba(0,140,104,0.18);
+  outline-offset: 3px;
+}

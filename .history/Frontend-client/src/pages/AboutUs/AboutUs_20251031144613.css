@@ -21,7 +21,6 @@
 
 .mission-block h2,
 .vision-block h2 {
-  overflow: hidden;
   font-size: 2.2rem;
   width: 100%;
   font-weight: 900;
@@ -113,7 +112,6 @@
 }
 
 .who-we-are-section h3 {
-  overflow: hidden;
   margin-left: 8.5vw;
   margin-bottom: 44px;
   max-width: 100%;
@@ -147,7 +145,6 @@
 }
 
 .summary-text h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
   color: black;
@@ -179,7 +176,6 @@
 }
 
 .summary-image img {
-  overflow: hidden;
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -232,7 +228,6 @@
 }
 
 .basic-needs-section h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
   color: black;

@@ -7,10 +7,16 @@ import PageBlueprint from "../../components/utilities/PageBlueprint/PageBlueprin
 function AboutUs() {
   return (
     <PageBlueprint title={"About Us"}>
-            {/* ===== MISSION & VISION ===== */}
+      {/* ===== MISSION & VISION ===== */}
+      {/* ===== MISSION & VISION ===== */}
       <section className="mission-vision-section">
         <div className="mission-block">
-          <h2>OUR MISSION</h2>
+          <h2>
+            <span role="img" aria-label="Mission Icon">
+              📈
+            </span>{" "}
+            OUR MISSION
+          </h2>
           <ul>
             <li>
               Changing society's attitude towards homeless children through
@@ -28,7 +34,12 @@ function AboutUs() {
           </ul>
         </div>
         <div className="vision-block">
-          <h2>OUR VISION</h2>
+          <h2>
+            <span role="img" aria-label="Vision Icon">
+              👁️
+            </span>{" "}
+            OUR VISION
+          </h2>
           <p>
             To rehabilitate homeless children afflicted with social problems and
             create a healthy youth for a self-reliant society.
@@ -57,7 +68,8 @@ function AboutUs() {
             <span className="founder-name">Sadashiv Chavan</span>
           </div>
           <div className="summary-image">
-            <img src="/src/assets/sadashivchahan.jpg" alt="Founder" />
+            {/* Image of founder goes here */}
+            <img src=""/src/assets/sadashivchahan.jpg" alt="Founder" />
           </div>
         </div>
       </section>
@@ -86,12 +98,8 @@ function AboutUs() {
       {/* ===== DOCUMENTS SECTION ===== */}
       <section className="documents-section">
         <div className="documents-gallery">
-          <a href="/src/assets/img1.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img1.jpg" alt="Document 1" />
-          </a>
-          <a href="/src/assets/img3.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img3.jpg" alt="Document 2" />
-          </a>
+          <img src="/path/to/document1.jpg" alt="Document 1" />
+          <img src="/path/to/document2.jpg" alt="Document 2" />
         </div>
       </section>
     </PageBlueprint>

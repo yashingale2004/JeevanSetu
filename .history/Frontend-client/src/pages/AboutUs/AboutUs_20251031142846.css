@@ -10,7 +10,8 @@
   margin-bottom: 44px;
   max-width: 100%;
   padding: 0 10px 0 10px;
-
+  background: none;
+  border-radius: 0;
   box-shadow: none;
   border-bottom: none;
   padding-bottom: 38px;
@@ -19,15 +20,26 @@
   position: relative;
 }
 
+.vision-block {
+  margin-left: 8vw;
+  margin-bottom: 44px;
+  max-width: 100%;
+  padding: 0 10px 0 10px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  text-align: left;
+}
+
 .mission-block h2,
 .vision-block h2 {
-  overflow: hidden;
   font-size: 2.2rem;
   width: 100%;
   font-weight: 900;
   margin-bottom: 22px;
   letter-spacing: 0.07em;
-  color: black;
+  color: #23408c;
   text-transform: uppercase;
   display: block;
   text-align: left;
@@ -35,8 +47,8 @@
 
 .mission-block ul {
   margin: 0;
-  padding-left: 38px !important;
-  list-style: none !important;
+  padding-left: 38px; /* Make padding more for left bullet points */
+  list-style-type: disc;
 }
 
 .mission-block ul li {
@@ -44,35 +56,15 @@
   font-size: 1.25rem;
   line-height: 1.8;
   color: #2d3851;
-  position: relative;
-  padding-left: 24px;
-}
-
-.mission-block ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  width: 11px;
-  height: 11px;
-  background: #ff9545;
-  border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
-}
-
-/* Vision block unchanged */
-.vision-block {
-  margin-left: 8vw;
-  margin-bottom: 44px;
-  max-width: 100%;
-  padding: 0 10px 0 10px;
-  text-align: left;
+  /* Force bullet points to show always */
+  list-style-type: disc !important;
+  display: list-item !important;
 }
 
 .vision-block p {
   width: 100%;
   font-size: 1.25rem;
+  margin: 0;
   color: #2d3851;
   line-height: 1.8;
 }
@@ -81,7 +73,7 @@
   content: "";
   display: block;
   width: 50%;
-  margin: 35px auto 0 auto;
+  margin: 35px auto 0 auto; /* space above border and center horizontally */
   border-bottom: 2px solid #e5e8ef;
 }
 
@@ -101,9 +93,6 @@
   .vision-block p {
     font-size: 1.07rem;
   }
-  .mission-block::after {
-    width: 80%;
-  }
 }
 
 /* ===== WHO WE ARE SECTION ===== */
@@ -113,13 +102,12 @@
 }
 
 .who-we-are-section h3 {
-  overflow: hidden;
   margin-left: 8.5vw;
   margin-bottom: 44px;
   max-width: 100%;
   font-size: 2.2rem;
   font-weight: 900;
-  color: black;
+  color: #23408c;
   letter-spacing: 0.09em;
   margin-bottom: 22px;
 }
@@ -147,10 +135,9 @@
 }
 
 .summary-text h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
-  color: black;
+  color: #23408c;
   margin-bottom: 12px;
 }
 
@@ -164,10 +151,12 @@
 .founder-name {
   display: block;
   font-size: 1.8rem;
-  font-weight: bolder;
-  color: black;
+  font-weight: 600;
+  color: #a07428;
   margin-top: 8px;
   letter-spacing: 0.08em;
+  color: black;
+  font-weight: bolder;
 }
 
 .summary-image {
@@ -179,7 +168,6 @@
 }
 
 .summary-image img {
-  overflow: hidden;
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -218,7 +206,6 @@
     height: 120px;
   }
 }
-
 /* ===== BASIC NEEDS SECTION (Styled to Match WHO WE ARE) ===== */
 .basic-needs-section {
   background: #e1e3e7;
@@ -232,10 +219,9 @@
 }
 
 .basic-needs-section h4 {
-  overflow: hidden;
   font-size: 1.6rem;
   font-weight: 700;
-  color: black;
+  color: #23408c;
   margin-bottom: 18px;
   letter-spacing: 0.09em;
 }
@@ -243,7 +229,6 @@
 .basic-needs-section ul {
   padding-left: 32px;
   margin: 0;
-  list-style: none !important;
 }
 
 .basic-needs-section ul li {
@@ -251,21 +236,22 @@
   margin-bottom: 18px;
   line-height: 1.75;
   position: relative;
-  padding-left: 24px;
+  padding-left: 22px;
   color: #32353b;
+  /* force bullet points for basic needs also */
+  list-style-type: disc !important;
+  display: list-item !important;
 }
 
 .basic-needs-section ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.8em;
+  top: 13px;
   width: 11px;
   height: 11px;
   background: #ff9545;
   border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
 }
 
 /* Responsive Design to match WHO WE ARE */
@@ -286,7 +272,6 @@
     font-size: 1rem;
   }
 }
-
 /* Documents Section - Center images horizontally */
 .documents-section {
   margin: 42px 0 0 0;

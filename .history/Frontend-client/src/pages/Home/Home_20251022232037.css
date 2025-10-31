@@ -44,14 +44,13 @@ button {
 .hero-cards {
   display: flex;
   gap: 2rem;
-  margin-top: 650px;
+  margin-top: px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .hero-card {
-  width: 500px;
-  height: 700px;
+  width: 300px;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
@@ -62,9 +61,8 @@ button {
 
 .hero-card img {
   width: 100%;
-  height: 350px;
+  height: 180px;
   object-fit: cover;
-  border-color: #0e926b;
 }
 
 .hero-card:hover {
@@ -72,20 +70,16 @@ button {
 }
 
 .hero-card-title {
-  height: 60px;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .hero-card-description {
-  height: 150px;
   font-size: 0.9rem;
   margin-bottom: 1rem;
 }
 
 .hero-card-btn {
-  width: 275px;
-  height: 50px;
   background-color: #ff6b6b;
   color: #fff;
   transition: background-color 0.3s ease;
@@ -122,12 +116,12 @@ button {
 }
 
 .welcome-buttons button {
-  background-color: #0e926b;
+  background-color: #1e90ff;
   color: #fff;
 }
 
 .welcome-buttons button:hover {
-  background-color: #0e926b;
+  background-color: #0077cc;
 }
 
 /* ===================== EMPOWERING SECTION ===================== */
@@ -146,7 +140,7 @@ button {
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 5px solid 1e90ff;
+  border: 5px solid #1e90ff;
 }
 
 .empowering-content {
@@ -163,7 +157,7 @@ button {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: #0e926b;
+  color: #1e90ff;
 }
 
 .empowering-description {
@@ -273,12 +267,12 @@ button {
 }
 
 .submit-btn {
-  background-color: #0e926b;
+  background-color: #1e90ff;
   color: #fff;
 }
 
 .submit-btn:hover {
-  background-color: #0e926b;
+  background-color: #0077cc;
 }
 
 /* ===================== TRANSPARENCY SECTION ===================== */

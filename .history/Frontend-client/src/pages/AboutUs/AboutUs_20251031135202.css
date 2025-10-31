@@ -1,0 +1,179 @@
+/* ===== MISSION & VISION SECTION ===== */
+.mission-vision-section {
+  display: block;
+  margin: 56px 0 32px 0;
+  width: 100%;
+}
+
+.mission-block {
+  margin-left: 5vw;
+  margin-bottom: 36px;
+  max-width: 820px;
+  padding: 0 14px 0 14px;
+  border-bottom: 1px solid #e5e8ef;
+  padding-bottom: 32px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.vision-block {
+  margin-left: 5vw;
+  margin-bottom: 36px;
+  max-width: 820px;
+  padding: 0 14px 0 14px;
+  overflow: hidden;
+  text-align: left;
+}
+
+.mission-block h2,
+.vision-block h2 {
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 18px;
+  letter-spacing: 0.08em;
+  color: #23408c;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+}
+
+.mission-block ul {
+  margin: 0;
+  padding-left: 32px;
+}
+
+.mission-block ul li {
+  margin-bottom: 20px;
+  font-size: 1.32rem;
+  line-height: 1.85;
+  color: #2d3851;
+  list-style-type: disc;
+}
+
+.vision-block p {
+  font-size: 1.32rem;
+  margin: 0;
+  color: #2d3851;
+  line-height: 1.85;
+}
+
+/* Responsive Design for Mission & Vision */
+@media (max-width: 950px) {
+  .mission-block,
+  .vision-block {
+    max-width: 99%;
+    margin-left: 2vw;
+    padding: 0 6px;
+  }
+  .mission-block h2,
+  .vision-block h2 {
+    font-size: 1.6rem;
+  }
+  .mission-block ul li,
+  .vision-block p {
+    font-size: 1.11rem;
+  }
+}
+
+/* ===== WHO WE ARE SECTION ===== */
+.who-we-are-section {
+  margin: 56px 0 0 0;
+  padding: 0 18px;
+}
+
+.who-we-are-section h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #23408c;
+  letter-spacing: 0.09em;
+  margin-bottom: 22px;
+}
+
+.about-summary {
+  display: flex;
+  gap: 44px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 38px;
+  background: #f7f8fa;
+  border-radius: 22px;
+  box-shadow: 0 2px 24px rgba(48, 64, 117, 0.08);
+  padding: 38px 32px;
+  position: relative;
+}
+
+.summary-text {
+  flex: 2;
+  min-width: 50px;
+}
+
+.summary-text h4 {
+  font-size: 1.22rem;
+  font-weight: 700;
+  color: #23408c;
+  margin-bottom: 12px;
+}
+
+.summary-text p {
+  font-size: 1.19rem;
+  line-height: 1.75;
+  color: #32353b;
+  margin-bottom: 18px;
+}
+
+.founder-name {
+  display: block;
+  font-size: 1.19rem;
+  font-weight: 600;
+  color: #a07428;
+  margin-top: 8px;
+  letter-spacing: 0.08em;
+}
+
+.summary-image {
+  flex: 1;
+  min-width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.summary-image img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 18px;
+  background: #f7f9fb;
+  margin-left: 18px;
+  box-shadow: 0 2px 16px rgba(80, 80, 80, 0.11);
+  transition: transform 0.18s;
+}
+
+.summary-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design for WHO WE ARE */
+@media (max-width: 1000px) {
+  .about-summary {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 28px 10px;
+  }
+  .summary-image {
+    justify-content: flex-start;
+    margin-top: 18px;
+  }
+  .summary-image img {
+    width: 170px;
+    height: 170px;
+  }
+}
+
+@media (max-width: 600px) {
+  .summary-image img {
+    width: 120px;
+    height: 120px;
+  }
+}

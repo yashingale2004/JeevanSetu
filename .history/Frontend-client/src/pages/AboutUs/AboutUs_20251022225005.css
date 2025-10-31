@@ -1,0 +1,145 @@
+/* General Page Styling */
+.about-section,
+.who-section,
+.needs-section {
+  width: 100%;
+  padding: 60px 10%;
+  box-sizing: border-box;
+  overflow: hidden; /* Changed from visible to hidden to remove scroll arrows */
+}
+
+.about-title,
+.who-title,
+.needs-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.about-image img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-points ul {
+  list-style-type: none;
+  padding-left: 0;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ===== WHO WE ARE SECTION ===== */
+.who-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.who-text {
+  flex: 1;
+  min-width: 300px;
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.who-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== BASIC NEEDS SECTION ===== */
+.needs-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.needs-points ul {
+  list-style: disc !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  padding-left: 40px !important;
+  margin-left: 20px !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+}
+
+.needs-points ul li {
+  display: list-item !important;
+  list-style: inherit !important;
+  list-style-type: disc !important;
+  list-style-position: outside !important;
+  margin-bottom: 10px;
+  margin-left: 0 !important;
+  padding-left: 5px !important;
+}
+
+/* Override Material-UI's list reset */
+.needs-points ul li::before {
+  content: none !important;
+}
+
+.needs-points ul li::marker {
+  color: #333 !important;
+  font-size: 1em !important;
+}
+
+.needs-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.needs-images img {
+  width: 320px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== GLOBAL SCROLLBAR AND OVERFLOW FIX ===== */
+html, body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Edge */
+}
+
+/* Remove scroll arrows from containers */
+*::-webkit-scrollbar-button {
+  display: none;
+}
+
+* {
+  scrollbar-width: none;
+}

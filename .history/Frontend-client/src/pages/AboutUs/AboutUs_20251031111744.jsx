@@ -1,37 +1,32 @@
 import React from "react";
 import Header from "../../components/Header-legacy/Header-legacy";
 import Footer from "../../components/Footer/Footer";
-import "./AboutUs.css";
+// import "./AboutUs.css";
 import PageBlueprint from "../../components/utilities/PageBlueprint/PageBlueprint";
 
 function AboutUs() {
   return (
     <PageBlueprint title={"About Us"}>
+      {/* ===== MISSION & VISION ===== */}
             {/* ===== MISSION & VISION ===== */}
       <section className="mission-vision-section">
         <div className="mission-block">
-          <h2>OUR MISSION</h2>
+          <h2>
+            <span role="img" aria-label="Mission Icon">📈</span> OUR MISSION
+          </h2>
           <ul>
-            <li>
-              Changing society's attitude towards homeless children through
-              public participation in social activities.
-            </li>
-            <li>
-              Invite homeless children for education by educating them according
-              to their skill and ability.
-            </li>
-            <li>
-              Offering them the experience of the sweetness of a relationship by
-              giving them love like family members.
-            </li>
+            <li>Changing society's attitude towards homeless children through public participation in social activities.</li>
+            <li>Invite homeless children for education by educating them according to their skill and ability.</li>
+            <li>Offering them the experience of the sweetness of a relationship by giving them love like family members.</li>
             <li>Acknowledging social responsibility through participation.</li>
           </ul>
         </div>
         <div className="vision-block">
-          <h2>OUR VISION</h2>
+          <h2>
+            <span role="img" aria-label="Vision Icon">👁️</span> OUR VISION
+          </h2>
           <p>
-            To rehabilitate homeless children afflicted with social problems and
-            create a healthy youth for a self-reliant society.
+            To rehabilitate homeless children afflicted with social problems and create a healthy youth for a self-reliant society.
           </p>
         </div>
       </section>
@@ -43,21 +38,14 @@ function AboutUs() {
           <div className="summary-text">
             <h4>Summary of Jeevan samvardhan Foundation</h4>
             <p>
-              Born in a typical Maharashtrian rural Warkari family, he was
-              closely associated with school culture from almost 15 years. Out
-              of which 8 years he was teacher. After that he worked for a
-              organization working for homeless children. While working in such
-              a setup he came across various issues and issues towards many
-              kinds of kids. Going deep in this matter he realized a bigger
-              issue of Homeless kids and need of their upliftment.
-              <br />
-              <br />
+              Born in a typical Maharashtrian rural Warkari family, he was closely associated with school culture from almost 15 years. Out of which 8 years he was teacher. After that he worked for a organization working for homeless children. While working in such a setup he came across various issues and issues towards many kinds of kids. Going deep in this matter he realized a bigger issue of Homeless kids and need of their upliftment.<br /><br />
               So he formed a NGO JSF and working for this noble cause.
             </p>
             <span className="founder-name">Sadashiv Chavan</span>
           </div>
           <div className="summary-image">
-            <img src="/src/assets/sadashivchahan.jpg" alt="Founder" />
+            {/* Image of founder goes here */}
+            <img src="/path/to/founder-image.jpg" alt="Founder" />
           </div>
         </div>
       </section>
@@ -66,19 +54,10 @@ function AboutUs() {
       <section className="basic-needs-section">
         <h4>The basic needs of such colonies are :</h4>
         <ul>
-          <li>
-            Education for all ages. We would like to start a Ekal Vidyalaya
-            (Biswadi) and also providing Nutrition to these children.
-          </li>
+          <li>Education for all ages. We would like to start a Ekal Vidyalaya (Biswadi) and also providing Nutrition to these children.</li>
           <li>To inculcate civilization in entire Community.</li>
-          <li>
-            Health Awareness and Medical Aid, Sanitation and cleanliness, habit
-            cultivation.
-          </li>
-          <li>
-            And lastly for final development, Vocational Training to youth and
-            ladies.
-          </li>
+          <li>Health Awareness and Medical Aid, Sanitation and cleanliness, habit cultivation.</li>
+          <li>And lastly for final development, Vocational Training to youth and ladies.</li>
           <li>Skill training for Livelihood.</li>
         </ul>
       </section>
@@ -86,12 +65,8 @@ function AboutUs() {
       {/* ===== DOCUMENTS SECTION ===== */}
       <section className="documents-section">
         <div className="documents-gallery">
-          <a href="/src/assets/img1.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img1.jpg" alt="Document 1" />
-          </a>
-          <a href="/src/assets/img3.jpg" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/img3.jpg" alt="Document 2" />
-          </a>
+          <img src="/path/to/document1.jpg" alt="Document 1" />
+          <img src="/path/to/document2.jpg" alt="Document 2" />
         </div>
       </section>
     </PageBlueprint>

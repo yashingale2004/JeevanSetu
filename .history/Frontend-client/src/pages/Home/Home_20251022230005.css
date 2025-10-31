@@ -1,0 +1,231 @@
+/* ===== GENERAL STYLES ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; padding: 0; }
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+img { display: block; max-width: 100%; height: auto; }
+a { text-decoration: none; }
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 720px;
+  color: white;
+  overflow: visible;
+  margin-bottom: 0;
+  padding-bottom: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 140px;
+  animation: slideUp 1s ease forwards;
+}
+
+.hero-title {
+  margin-top: 120px;
+  text-align: center;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.06;
+  color: #fff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  letter-spacing: 0.4px;
+  width: min(1100px, 92%);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.hero-cards {
+  margin-top: 120px;
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* individual card */
+.hero-card {
+  width: 330px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #008c68;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.hero-card:nth-child(1) { animation-delay: 0.3s; }
+.hero-card:nth-child(2) { animation-delay: 0.5s; }
+
+.hero-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
+}
+
+.hero-card img { width: 100%; height: 180px; object-fit: cover; flex-shrink: 0; }
+.hero-card .MuiCardContent-root { padding: 18px 20px 24px; display: flex; flex-direction: column; flex: 1; }
+
+.hero-card-title { color: #008c68; font-weight: 700; font-size: 18px; margin: 0 0 8px; }
+.hero-card-description { color: #222; font-size: 14.5px; line-height: 1.6; margin-bottom: 16px; flex: 1; }
+
+.hero-card-btn {
+  display: inline-block;
+  background-color: #fca00c !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  text-transform: none !important;
+  border-radius: 28px !important;
+  padding: 10px 30px !important;
+  box-shadow: 0 6px 10px rgba(252,160,12,0.15);
+  align-self: flex-start;
+  margin-top: auto;
+  transition: all 0.3s ease;
+}
+
+.hero-card-btn:hover { transform: scale(1.05); }
+
+/* ===== WELCOME SECTION ===== */
+.welcome-section {
+  background-color: #0e926b;
+  color: white;
+  text-align: center;
+  padding: 100px 20px 72px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* buttons with hover animation */
+.welcome-buttons button {
+  padding: 12px 32px !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease;
+}
+
+.welcome-buttons button:hover { transform: translateY(-3px) scale(1.03); }
+
+/* ===== EMPOWERING SECTION ===== */
+.empowering-section { 
+  background: #f9f9f9; 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: 70px; 
+  padding: 100px 40px; 
+  flex-wrap: wrap; 
+  opacity: 0;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.empowering-image img { transition: transform 0.3s ease; }
+.empowering-image img:hover { transform: scale(1.05) rotate(1deg); }
+
+/* ===== FEATURED CAMPAIGNS ===== */
+.donation-cards-container { display:flex; gap:50px; justify-content:center; flex-wrap:wrap; }
+.donation-cards-container > * { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.donation-cards-container > *:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.18); }
+
+/* ===== CONTACT SECTION ===== */
+.contact-section { 
+  background-color: #0e926b; 
+  display: flex; 
+  justify-content: center; 
+  align-items: stretch; 
+  gap: 50px; 
+  padding: 80px 40px; 
+  flex-wrap: wrap; 
+  opacity: 0;
+  animation: fadeSlideIn 1s ease forwards;
+}
+
+.contact-images img { transition: transform 0.3s ease; }
+.contact-images img:hover { transform: scale(1.05) rotate(1deg); }
+
+/* ===== TRANSPARENCY SECTION ===== */
+.transparency-section { 
+  text-align:center; 
+  padding:100px 20px; 
+  background:#fff; 
+  color:#000; 
+  display:flex; 
+  flex-direction:column; 
+  align-items:center; 
+  justify-content:center; 
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeIn { 
+  0% { opacity:0; } 
+  100% { opacity:1; } 
+}
+@keyframes slideUp { 
+  0% { transform: translateY(40px); opacity: 0; } 
+  100% { transform: translateY(0); opacity: 1; } 
+}
+@keyframes fadeSlideIn {
+  0% { opacity:0; transform: translateY(30px); } 
+  100% { opacity:1; transform: translateY(0); } 
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) { .hero-title { font-size:48px; } }
+@media (max-width: 900px) {
+  .hero-section { min-height: 620px; margin-bottom: 120px; }
+  .hero-title { font-size:40px; }
+  .empowering-image img { width:300px; height:300px; }
+  .empowering-section { padding:60px 20px; gap:40px; }
+  .contact-images { grid-template-columns: repeat(2,1fr); }
+}
+@media (max-width: 600px) {
+  .hero-title { font-size:30px; margin:0 auto 22px; }
+  .hero-cards { flex-direction: column; gap:18px; margin:0 auto; padding:0 16px 20px; }
+  .hero-card { width:92%; max-width:420px; }
+  .section-title { font-size:28px; }
+  .transparency-title { font-size:26px; }
+  .contact-title { font-size:26px; }
+  .welcome-section { padding:60px 20px 40px; }
+}
+
+/* accessibility focus outline */
+button:focus, .hero-card-btn:focus { outline: 3px solid rgba(0,140,104,0.18); outline-offset: 3px; }

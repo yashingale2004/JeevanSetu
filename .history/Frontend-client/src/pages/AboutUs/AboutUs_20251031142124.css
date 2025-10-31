@@ -1,4 +1,3 @@
-/* ===== MISSION & VISION SECTION ===== */
 .mission-vision-section {
   display: block;
   margin: 64px 0 40px 0;
@@ -10,8 +9,10 @@
   margin-bottom: 44px;
   max-width: 100%;
   padding: 0 10px 0 10px;
-
+  background: none;
+  border-radius: 0;
   box-shadow: none;
+  /* Make border-bottom half width and centered */
   border-bottom: none;
   padding-bottom: 38px;
   overflow: hidden;
@@ -19,15 +20,26 @@
   position: relative;
 }
 
+.vision-block {
+  margin-left: 8vw;
+  margin-bottom: 44px;
+  max-width: 100%;
+  padding: 0 10px 0 10px;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+  text-align: left;
+}
+
 .mission-block h2,
 .vision-block h2 {
-  overflow: hidden;
   font-size: 2.2rem;
   width: 100%;
   font-weight: 900;
   margin-bottom: 22px;
   letter-spacing: 0.07em;
-  color: black;
+  color: #23408c;
   text-transform: uppercase;
   display: block;
   text-align: left;
@@ -35,8 +47,7 @@
 
 .mission-block ul {
   margin: 0;
-  padding-left: 38px !important;
-  list-style: none !important;
+  padding-left: 28px;
 }
 
 .mission-block ul li {
@@ -44,44 +55,21 @@
   font-size: 1.25rem;
   line-height: 1.8;
   color: #2d3851;
-  position: relative;
-  padding-left: 24px;
-}
-
-.mission-block ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.8em;
-  width: 11px;
-  height: 11px;
-  background: #ff9545;
-  border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
-}
-
-/* Vision block unchanged */
-.vision-block {
-  margin-left: 8vw;
-  margin-bottom: 44px;
-  max-width: 100%;
-  padding: 0 10px 0 10px;
-  text-align: left;
+  list-style-type: disc;
 }
 
 .vision-block p {
   width: 100%;
   font-size: 1.25rem;
+  margin: 0;
   color: #2d3851;
   line-height: 1.8;
 }
-
 .mission-block::after {
   content: "";
   display: block;
   width: 50%;
-  margin: 35px auto 0 auto;
+  margin: 35px auto 0 auto; /* space above border and center horizontally */
   border-bottom: 2px solid #e5e8ef;
 }
 
@@ -101,9 +89,6 @@
   .vision-block p {
     font-size: 1.07rem;
   }
-  .mission-block::after {
-    width: 80%;
-  }
 }
 
 /* ===== WHO WE ARE SECTION ===== */
@@ -113,13 +98,13 @@
 }
 
 .who-we-are-section h3 {
-  overflow: hidden;
   margin-left: 8.5vw;
   margin-bottom: 44px;
   max-width: 100%;
   font-size: 2.2rem;
+  /* font-size: 1.6rem; */
   font-weight: 900;
-  color: black;
+  color: #23408c;
   letter-spacing: 0.09em;
   margin-bottom: 22px;
 }
@@ -147,15 +132,14 @@
 }
 
 .summary-text h4 {
-  overflow: hidden;
-  font-size: 1.6rem;
+  font-size: 1.22rem;
   font-weight: 700;
-  color: black;
+  color: #23408c;
   margin-bottom: 12px;
 }
 
 .summary-text p {
-  font-size: 1.3rem;
+  font-size: 1.19rem;
   line-height: 1.75;
   color: #32353b;
   margin-bottom: 18px;
@@ -163,9 +147,9 @@
 
 .founder-name {
   display: block;
-  font-size: 1.8rem;
-  font-weight: bolder;
-  color: black;
+  font-size: 1.19rem;
+  font-weight: 600;
+  color: #a07428;
   margin-top: 8px;
   letter-spacing: 0.08em;
 }
@@ -179,7 +163,6 @@
 }
 
 .summary-image img {
-  overflow: hidden;
   width: 400px;
   height: 400px;
   object-fit: cover;
@@ -189,6 +172,7 @@
   box-shadow: 0 2px 16px rgba(80, 80, 80, 0.11);
   transition: transform 0.18s;
 }
+
 
 .summary-image img:hover {
   transform: scale(1.05);
@@ -218,73 +202,45 @@
     height: 120px;
   }
 }
-
-/* ===== BASIC NEEDS SECTION (Styled to Match WHO WE ARE) ===== */
+/* Basic Needs Section */
 .basic-needs-section {
-  background: #e1e3e7;
-  border-radius: 22px;
-  box-shadow: 0 2px 24px rgba(48, 64, 117, 0.08);
-  padding: 38px 32px;
-  margin: 42px 0 0 8vw;
-  max-width: 80%;
-  overflow: hidden;
-  position: relative;
+  background: #f7f8fa;
+  border-radius: 16px;
+  box-shadow: 0 2px 18px rgba(48, 64, 117, 0.07);
+  padding: 36px 32px;
+  margin: 42px 0 0 0;
 }
 
 .basic-needs-section h4 {
-  overflow: hidden;
-  font-size: 1.6rem;
+  font-size: 1.19rem;
   font-weight: 700;
-  color: black;
-  margin-bottom: 18px;
-  letter-spacing: 0.09em;
+  color: #23408c;
+  margin-bottom: 17px;
+  letter-spacing: 0.03em;
 }
 
 .basic-needs-section ul {
-  padding-left: 32px;
+  padding-left: 1.2em;
   margin: 0;
-  list-style: none !important;
 }
 
 .basic-needs-section ul li {
-  font-size: 1.3rem;
-  margin-bottom: 18px;
-  line-height: 1.75;
+  font-size: 1.09rem;
+  margin-bottom: 13px;
+  line-height: 1.58;
   position: relative;
-  padding-left: 24px;
-  color: #32353b;
+  padding-left: 22px;
 }
 
 .basic-needs-section ul li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.8em;
-  width: 11px;
-  height: 11px;
+  top: 11px;
+  width: 7px;
+  height: 7px;
   background: #ff9545;
   border-radius: 50%;
-  display: inline-block;
-  transform: translateY(-50%);
-}
-
-/* Responsive Design to match WHO WE ARE */
-@media (max-width: 1000px) {
-  .basic-needs-section {
-    padding: 28px 10px;
-    max-width: 97%;
-    margin-left: 2vw;
-    border-radius: 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .basic-needs-section {
-    padding: 12px 3px;
-  }
-  .basic-needs-section ul li {
-    font-size: 1rem;
-  }
 }
 
 /* Documents Section - Center images horizontally */
